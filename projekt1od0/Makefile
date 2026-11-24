@@ -6,16 +6,16 @@ OBJS = main.o matrix.o matrix_io.o
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+  $(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
 
 main.o: main.c matrix.h matrix_io.h
-$(CC) $(CFLAGS) -c main.c
+  $(CC) $(CFLAGS) -c main.c
 
 matrix.o: matrix.c matrix.h
-$(CC) $(CFLAGS) -c matrix.c
+  $(CC) $(CFLAGS) -c matrix.c
 
 matrix_io.o: matrix_io.c matrix_io.h matrix.h
-$(CC) $(CFLAGS) -c matrix_io.c
+  $(CC) $(CFLAGS) -c matrix_io.c
 
 clean:
-rm -f $(OBJS) $(TARGET)
+  rm -f $(OBJS) $(TARGET)
